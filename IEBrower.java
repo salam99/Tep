@@ -2,18 +2,16 @@ package Tep;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
-public class FirefoxBrowser {
+public class IEBrower {
 
-	//private static final CharSequence Mohammed = null;
-
-	//private static final String CurrentTime = null;
-
-	public static void main(String[] args) throws Exception   {
+	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-		 WebDriver driver = new FirefoxDriver();
-		 driver.manage().window().maximize();
+		System.setProperty("webdriver.ie.driver","C:\\Program Files (x86)\\Selenium\\IEDriverServer.exe");
+		
+		WebDriver driver = new InternetExplorerDriver(); 
+		driver.manage().window().maximize();
 		 
 		 driver.get("http://www.webloadmpstore.com");
 		 Thread.sleep(2000);
@@ -47,4 +45,4 @@ public class FirefoxBrowser {
 }
 
 
- 
+

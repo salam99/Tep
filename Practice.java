@@ -17,7 +17,7 @@ public class Practice {
 		System.out.println("close the FF Browser");
 		System.out.println("The test passed");
 		
-		driver.quit();
+		driver.close();
 		
 
 	}

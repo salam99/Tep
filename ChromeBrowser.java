@@ -2,24 +2,25 @@ package Tep;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+ 
 
-public class FirefoxBrowser {
+public class ChromeBrowser {
 
-	//private static final CharSequence Mohammed = null;
-
-	//private static final String CurrentTime = null;
-
-	public static void main(String[] args) throws Exception   {
-		// TODO Auto-generated method stub
-		 WebDriver driver = new FirefoxDriver();
+	public static void main(String[] args) throws Exception {
+		 //WebDriver driver = new FirefoxDriver();
+		//webdriver.chrome.driver
+		//C:\Program Files (x86)\Selenium\chromedriver.exe
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Selenium\\chromedriver.exe");
+		
+		 WebDriver driver = new ChromeDriver();
 		 driver.manage().window().maximize();
-		 
 		 driver.get("http://www.webloadmpstore.com");
 		 Thread.sleep(2000);
 		 driver.findElement(By.linkText("LOGIN")).click();
 		 driver.findElement(By.linkText("Register")).click();
-		long currentTime = System.currentTimeMillis();
+		 long currentTime = System.currentTimeMillis();
 		
 		 driver.findElement(By.name("name")).clear();
 		 driver.findElement(By.name("name")).sendKeys("Mo");
@@ -37,7 +38,7 @@ public class FirefoxBrowser {
 		  
 		 driver.findElement(By.name("Submit")).click();
 		 System.out.println("The test is passed. ");
-		 System.out.println("Selenium is awesome!");
+		 System.out.println("Selenium is fun!");
 		 Thread.sleep(2000);
 		 driver.close();
 		 
@@ -46,5 +47,3 @@ public class FirefoxBrowser {
 
 }
 
-
- 
