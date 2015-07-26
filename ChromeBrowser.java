@@ -13,8 +13,8 @@ public class ChromeBrowser {
 		//C:\Program Files (x86)\Selenium\chromedriver.exe
 		
 		System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Selenium\\chromedriver.exe");
-		
 		 WebDriver driver = new ChromeDriver();
+		 
 		 driver.manage().window().maximize();
 		 driver.get("http://www.webloadmpstore.com");
 		 Thread.sleep(2000);
@@ -24,6 +24,7 @@ public class ChromeBrowser {
 		
 		 driver.findElement(By.name("name")).clear();
 		 driver.findElement(By.name("name")).sendKeys("Mo");
+		 
 		 driver.findElement(By.name("email")).clear();
 		 driver.findElement(By.name("email")).sendKeys("salam99@gmail.com");
 		 driver.findElement(By.name("phone")).clear();

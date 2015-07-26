@@ -1,6 +1,7 @@
 package Tep;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
@@ -11,11 +12,17 @@ public class IEBrower {
 		System.setProperty("webdriver.ie.driver","C:\\Program Files (x86)\\Selenium\\IEDriverServer.exe");
 		
 		WebDriver driver = new InternetExplorerDriver(); 
+		
+		
 		driver.manage().window().maximize();
-		 
 		 driver.get("http://www.webloadmpstore.com");
 		 Thread.sleep(2000);
-		 driver.findElement(By.linkText("LOGIN")).click();
+		 driver.findElement(By.linkText("LOGIN")).sendKeys(Keys.ENTER);
+		// driver.findElement(By.linkText("LOGIN")).click();
+		 
+		// driver.findElement(By.xpath("//a[contains(text(),'LOGIN')]")).click();
+		// driver.findElement(By.xpath("//a[contains(text(),'LOGIN')]")).sendKeys(Keys.ENTER);
+		  driver.findElement(By.linkText("LOGIN")).sendKeys(Keys.ENTER);
 		 driver.findElement(By.linkText("Register")).click();
 		long currentTime = System.currentTimeMillis();
 		
